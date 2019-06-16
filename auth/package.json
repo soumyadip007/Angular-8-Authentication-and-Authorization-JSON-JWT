@@ -22,7 +22,7 @@
     "@angular/router": "~8.0.0",
     "angular2-jwt": "^0.2.3",
     "rxjs": "~6.4.0",
-    "rxjs-compat": "^6.0.0-tactical-rc.1",
+    "rxjs-compat": "^6.5.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },
