@@ -1,13 +1,6 @@
-/* tslint:disable:no-unused-variable */
-// Subject imported before Observable to bypass circular dependency issue since
-// Subject extends Observable and Observable references Subject in it's
-// definition
 export { Observable, Subject } from 'rxjs';
 export { AnonymousSubject } from 'rxjs/internal-compatibility';
-/* tslint:enable:no-unused-variable */
 export { config } from 'rxjs/internal-compatibility';
-// statics
-/* tslint:disable:no-use-before-declare */
 import './add/observable/bindCallback';
 import './add/observable/bindNodeCallback';
 import './add/observable/combineLatest';
@@ -33,10 +26,8 @@ import './add/observable/using';
 import './add/observable/throw';
 import './add/observable/timer';
 import './add/observable/zip';
-//dom
 import './add/observable/dom/ajax';
 import './add/observable/dom/webSocket';
-//internal/operators
 import './add/operator/buffer';
 import './add/operator/bufferCount';
 import './add/operator/bufferTime';
@@ -139,7 +130,6 @@ import './add/operator/windowWhen';
 import './add/operator/withLatestFrom';
 import './add/operator/zip';
 import './add/operator/zipAll';
-/* tslint:disable:no-unused-variable */
 export { Subscription, ReplaySubject, BehaviorSubject, Notification, EmptyError, ArgumentOutOfRangeError, ObjectUnsubscribedError, UnsubscriptionError, pipe } from 'rxjs';
 export { TestScheduler } from 'rxjs/testing';
 export { Subscriber, AsyncSubject, ConnectableObservable, TimeoutError, VirtualTimeScheduler } from 'rxjs';
@@ -149,39 +139,12 @@ import { iterator, observable, rxSubscriber } from 'rxjs/internal-compatibility'
 export { TimeInterval, Timestamp } from 'rxjs/internal-compatibility';
 import * as _operators from 'rxjs/operators';
 export const operators = _operators;
-/* tslint:enable:no-unused-variable */
-/**
- * @typedef {Object} Rx.Scheduler
- * @property {Scheduler} queue Schedules on a queue in the current event frame
- * (trampoline scheduler). Use this for iteration operations.
- * @property {Scheduler} asap Schedules on the micro task queue, which uses the
- * fastest transport mechanism available, either Node.js' `process.nextTick()`
- * or Web Worker MessageChannel or setTimeout or others. Use this for
- * asynchronous conversions.
- * @property {Scheduler} async Schedules work with `setInterval`. Use this for
- * time-based operations.
- * @property {Scheduler} animationFrame Schedules work with `requestAnimationFrame`.
- * Use this for synchronizing with the platform's painting
- */
 let Scheduler = {
     asap: asapScheduler,
     queue: queueScheduler,
     animationFrame: animationFrameScheduler,
     async: asyncScheduler
 };
-/**
- * @typedef {Object} Rx.Symbol
- * @property {Symbol|string} rxSubscriber A symbol to use as a property name to
- * retrieve an "Rx safe" Observer from an object. "Rx safety" can be defined as
- * an object that has all of the traits of an Rx Subscriber, including the
- * ability to add and remove subscriptions to the subscription chain and
- * guarantees involving event triggering (can't "next" after unsubscription,
- * etc).
- * @property {Symbol|string} observable A symbol to use as a property name to
- * retrieve an Observable as defined by the [ECMAScript "Observable" spec](https://github.com/zenparsing/es-observable).
- * @property {Symbol|string} iterator The ES6 symbol to use as a property name
- * to retrieve an iterator from an object.
- */
 let Symbol = {
     rxSubscriber,
     observable,
