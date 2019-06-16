@@ -10,6 +10,7 @@ import { HttpModule, Http, BaseRequestOptions } from '@angular/http';
 import { RouterModule } from '@angular/router'; 
 
 import { AppComponent } from './app.component';
+
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
