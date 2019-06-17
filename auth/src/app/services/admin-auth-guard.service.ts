@@ -9,7 +9,7 @@ import { setFlagsFromString } from 'v8';
 export class AdminAuthGuard implements CanActivate {
 
   constructor( 
-     private route: ActivatedRoute,
+     private route: Rout,
     private authService: AuthService) { }
 
     CanActivate(){
