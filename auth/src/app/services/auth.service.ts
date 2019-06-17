@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import 'rxjs/add/operator/map'
 
 @Injectable()
 export class AuthService {
@@ -8,7 +9,10 @@ export class AuthService {
 
   login(credentials) { 
    return this.http.post('/api/authenticate', 
-      JSON.stringify(credentials));
+      JSON.stringify(credentials))
+      .map(response=>{
+        console.log(response.json());
+      });
   }
 
   logout() { 
