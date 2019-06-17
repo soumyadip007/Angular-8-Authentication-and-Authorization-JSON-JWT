@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from './auth.service';
-import { setFlagsFromString } from 'v8';
 import { Route } from '@angular/compiler/src/core';
 
 @Injectable({
