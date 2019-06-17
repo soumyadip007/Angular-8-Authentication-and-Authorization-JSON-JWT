@@ -20,6 +20,7 @@
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
+    "angular-jwt": "^0.1.11",
     "angular2-jwt": "^0.2.3",
     "bootstrap": "^4.3.1",
     "rxjs": "~6.4.0",
