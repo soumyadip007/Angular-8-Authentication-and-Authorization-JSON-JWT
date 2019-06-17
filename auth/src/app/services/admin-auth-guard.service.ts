@@ -13,7 +13,8 @@ export class AdminAuthGuard  {
     private authService: AuthService) { }
 
     CanActivate(){
-      if(this.authService.currentUser.admin) return true;
+      let user=this.authService.currentUser.admin;
+      if(user && user.admin) return true;
 
       this.route.navigate(['/no-access']);
       return false;
