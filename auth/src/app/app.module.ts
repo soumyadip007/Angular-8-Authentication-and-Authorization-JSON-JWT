@@ -18,6 +18,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NoAccessComponent } from './no-access/no-access.component';
 import { AuthGuard } from './services/auth-guard.service';
+import { AdminAuthGuard } from './services/admin-auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { AuthGuard } from './services/auth-guard.service';
     OrderService,
 
     AuthService,
+    AdminAuthGuard,
     AuthGuard,
     // For creating a mock back-end. You don't need these in a real app. 
     fakeBackendProvider,
