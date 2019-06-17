@@ -10,4 +10,8 @@ export class AdminAuthGuard implements CanActivate {
   constructor( 
      private route: ActivatedRoute,
     private authService: AuthService) { }
+
+    CanActivate(){
+      
+    }
 }
