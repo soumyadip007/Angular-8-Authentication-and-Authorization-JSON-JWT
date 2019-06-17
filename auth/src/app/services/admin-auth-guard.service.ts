@@ -12,6 +12,7 @@ export class AdminAuthGuard implements CanActivate {
     private authService: AuthService) { }
 
     CanActivate(){
-      
+      if(this.authService.currentUser.admin) return true;
+
     }
 }
