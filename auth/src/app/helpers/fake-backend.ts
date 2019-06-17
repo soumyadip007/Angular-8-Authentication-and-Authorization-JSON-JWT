@@ -26,7 +26,7 @@ export function fakeBackendFactory(
            })));
         } else {
           connection.mockRespond(new Response(
-            new ResponseOptions({ status: 200 })
+            new ResponseOptions({ status: 400 })
           ));
         }
       }
