@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRoute } from '@angular/router';
+import { CanActivate, ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from './auth.service';
 import { setFlagsFromString } from 'v8';
+import { Route } from '@angular/compiler/src/core';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { setFlagsFromString } from 'v8';
 export class AdminAuthGuard implements CanActivate {
 
   constructor( 
-     private route: Rout,
+     private route: Router,
     private authService: AuthService) { }
 
     CanActivate(){
