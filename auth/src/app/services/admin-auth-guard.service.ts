@@ -7,7 +7,7 @@ import { Route } from '@angular/compiler/src/core';
 @Injectable({
   providedIn: 'root'
 })
-export class AdminAuthGuard implements CanActivate {
+export class AdminAuthGuard  {
 
   constructor( 
      private route: Router,
